@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Mark Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Internal Mark Calculator</h1>
+        <label for="subject">Choose Subject Type:</label>
+        <select id="subject" required>
+            <option value="" disabled selected>Select...</option>
+            <option value="t">Theory</option>
+            <option value="p">Practical</option>
+        </select>
+        <div id="marks-input">
+            <div>
+                <h3>CAT Marks</h3>
+                <input type="number" id="cat1" placeholder="CAT 1 Marks">
+                <input type="number" id="cat2" placeholder="CAT 2 Marks">
+                <input type="number" id="cat3" placeholder="CAT 3 Marks">
+            </div>
+            <div id="assignments" style="display: none;">
+                <h3>Assignment Marks</h3>
+                <input type="number" id="ass1" placeholder="Assignment 1 Marks">
+                <input type="number" id="ass2" placeholder="Assignment 2 Marks">
+                <input type="number" id="ass3" placeholder="Assignment 3 Marks">
+            </div>
+            <div id="model" style="display: none;">
+                <h3>Model Exam Mark</h3>
+                <input type="number" id="modelMark" placeholder="Model Exam Mark">
+            </div>
+        </div>
+        <button onclick="calculateMark()">Calculate Internal Mark</button>
+        <h2>Your Internal Mark: <span id="result">-</span></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
